@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ds-scheduler"
+version = "0.1.0"
+description = "Discord bot with persistent scheduled tasks that call registered Discord actions."
+license = { file = "LICENSE" }
+requires-python = ">=3.11"
+dependencies = [
+    "discord.py>=2.4,<3.0",
+    "APScheduler[sqlalchemy]>=3.11,<4.0",
+    "python-dotenv>=1.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
